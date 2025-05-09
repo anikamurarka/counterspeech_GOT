@@ -26,10 +26,10 @@ def main():
     
     # Clone and install GitHub repositories
     repos = [
-        # "https://github.com/leolani/cltl-knowledgeextraction",
-        # "https://github.com/leolani/cltl-knowledgerepresentation",
-        # "https://github.com/leolani/cltl-combot",
-        # "https://github.com/leolani/cltl-knowledgelinking",
+        "https://github.com/leolani/cltl-knowledgeextraction",
+        "https://github.com/leolani/cltl-knowledgerepresentation",
+        "https://github.com/leolani/cltl-combot",
+        "https://github.com/leolani/cltl-knowledgelinking",
         # "https://github.com/huggingface/neuralcoref.git"
     ]
     
