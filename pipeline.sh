@@ -21,4 +21,4 @@ CUDA_VISIBLE_DEVICES=0 python \
   --epoch 20 --lr 5e-5 --bs 8 --eval_bs 16 \
   --input_len 512 --output_len 256 \
   --bf16 \
-  --evaluate_dir experiments/DIALOCONAN/declare-lab-flan-alpaca-base_lr5e-05_bs8_op256_ep20_2025-05-09-14-59
+  --evaluate_dir experiments/DIALOCONAN/declare-lab-flan-alpaca-base_lr5e-05_bs8_op256_ep20_2025-05-08-23-03

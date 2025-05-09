@@ -7,4 +7,4 @@ data/DIALOCONAN/*.json
 data/DIALOCONAN/got
 experiments/DIALOCONAN
 *.pyc
-
+corenlp_*

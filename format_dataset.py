@@ -57,6 +57,27 @@ def main():
     [train_set, test_set] = train_test_split(organized_data, test_size=0.10, random_state=42)
     [train_set, dev_set] = train_test_split(train_set, test_size=0.1111, random_state=42)
     print(f'Train size: {len(train_set)}, Dev size: {len(dev_set)}, Test size: {len(test_set)}')
+    
+    # Print target distribution
+    print("\nTarget distribution in full dataset:")
+    full_targets = pd.Series([item['target'] for item in organized_data]).value_counts()
+    for target, count in full_targets.items():
+        print(f"  {target}: {count} ({count/len(organized_data):.2%})")
+    
+    print("\nTarget distribution in train set:")
+    train_targets = pd.Series([item['target'] for item in train_set]).value_counts()
+    for target, count in train_targets.items():
+        print(f"  {target}: {count} ({count/len(train_set):.2%})")
+    
+    print("\nTarget distribution in dev set:")
+    dev_targets = pd.Series([item['target'] for item in dev_set]).value_counts()
+    for target, count in dev_targets.items():
+        print(f"  {target}: {count} ({count/len(dev_set):.2%})")
+    
+    print("\nTarget distribution in test set:")
+    test_targets = pd.Series([item['target'] for item in test_set]).value_counts()
+    for target, count in test_targets.items():
+        print(f"  {target}: {count} ({count/len(test_set):.2%})")
 
     # Create output directory and save files
     output_directory = Path("data/DIALOCONAN")
