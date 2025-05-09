@@ -27,7 +27,7 @@ def ensure_directory_exists(directory_path):
     path_obj.mkdir(parents=True, exist_ok=True)
 
 
-def read_json_dataset(args, partition):
+def load_data(args, partition):
     """Load dataset from JSON file for specified partition."""
     file_path = Path(args.data_root) / Path(args.dataset) / f"{partition}.json"
     with open(file_path, 'r', encoding='utf-8') as json_file:

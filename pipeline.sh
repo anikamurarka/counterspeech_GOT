@@ -1,5 +1,4 @@
-conda activate graph-based-hs-cn
-cd src
+conda activate kg-counter-narratives
 
 python format_dataset.py
 
