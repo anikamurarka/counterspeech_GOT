@@ -45,7 +45,7 @@ def organize_dialogue_data(grouped_dialogues):
 
 def main():
     # Import the dataset
-    dialogue_data = pd.read_csv("/kaggle/working/counterspeech_GOT/data/DIALOCONAN/dialoconan.csv").sort_values(by=["dialogue_id", "turn_id"])
+    dialogue_data = pd.read_csv("data/DIALOCONAN/dialoconan.csv").sort_values(by=["dialogue_id", "turn_id"])
 
     # Group dialogues by their ID
     grouped_dialogues = dialogue_data.groupby(["dialogue_id"])

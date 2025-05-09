@@ -10,14 +10,14 @@ def run_command(command):
 
 def main():
     # Change directory
-    os.chdir("kg-counter-narratives")
+    # os.chdir("kg-counter-narratives")
     
     # Set up conda environment
-    run_command("conda create --name kg-counter-narratives python=3.8 -y")
+    # run_command("conda create --name kg-counter-narratives python=3.8 -y")
     
     # This is tricky in a script - in reality, this activates the environment in a subshell
     # For a script, we'd want to use the conda Python directly instead
-    conda_prefix = os.path.join(os.path.expanduser('~'), 'miniconda3', 'envs', 'graph-based-hs-cn', 'bin')
+    conda_prefix = os.path.join(os.path.expanduser('~'), 'miniconda3', 'envs', 'kg-counter-narratives', 'bin')
     python_path = os.path.join(conda_prefix, 'python')
     pip_path = os.path.join(conda_prefix, 'pip')
     
@@ -30,7 +30,7 @@ def main():
         "https://github.com/leolani/cltl-knowledgerepresentation",
         "https://github.com/leolani/cltl-combot",
         "https://github.com/leolani/cltl-knowledgelinking",
-        "https://github.com/huggingface/neuralcoref.git"
+        # "https://github.com/huggingface/neuralcoref.git"
     ]
     
     for repo in repos:
@@ -49,6 +49,9 @@ def main():
     # Final installations
     run_command(f"{pip_path} install stanford-openie")
     run_command(f"{pip_path} install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz")
+    
+    # Add spaCy model download directly
+    run_command(f"{python_path} -m spacy download en_core_web_sm")
     
     print("Installation complete!")
 

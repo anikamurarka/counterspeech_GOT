@@ -11,18 +11,13 @@ To set up the project environment:
 
 1. Create a Python virtual environment:
    ```
-   conda create --name kg-counter-narratives python=3.8
+   conda create --name kg-counter-narratives python=3.9
    conda activate kg-counter-narratives
    ```
 
-2. Install dependencies:
+2. Run the install script:
    ```
-   pip install -r requirements.txt
-   ```
-
-3. Run the install script:
-   ```
-   ./install.sh
+   python install.py
    ```
 
 ## Running the Project
