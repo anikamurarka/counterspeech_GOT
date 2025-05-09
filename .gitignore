@@ -4,4 +4,6 @@ cltl-combot
 cltl-knowledgelinking
 kg-counter-narratives
 data/DIALOCONAN/*.json
+data/DIALOCONAN/got
+experiments/DIALOCONAN
 
